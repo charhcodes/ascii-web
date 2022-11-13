@@ -16,8 +16,10 @@ func main() {
 func serverHandler(res http.ResponseWriter, req *http.Request) {
 	//template := template.Must(template.ParseGlob("static/templates/temp.html"))
 	if req.URL.Path != "/" { //this is where the path ends
-		http.Error(res, "404 not found.", http.StatusNotFound)
-		return
+		if req.URL.Path != "/result" {
+			http.Error(res, "404 Status not found", http.StatusNotFound)
+			return
+		}
 	}
 	switch req.Method {
 	case "GET":
@@ -27,9 +29,8 @@ func serverHandler(res http.ResponseWriter, req *http.Request) {
 			http.Error(res, err.Error(), http.StatusBadRequest) // if there is an error it returns bad request 400
 			return
 		} else {
-			fmt.Fprintf(res, "it worked!")
+			_, _ = res.Write([]byte("Submission recorded!"))
 		}
-		//input := req.FormValue("input")
 	default:
 		//method not supported
 		http.Error(res, "Method is not supported.", http.StatusUnsupportedMediaType)
