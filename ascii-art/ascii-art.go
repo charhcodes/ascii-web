@@ -8,9 +8,8 @@ import (
 )
 
 func Ascii(fnt, str string) string {
-	//fmt.Printf("value %s", fnt)
-	Nstring := strings.ReplaceAll(str, "\r", "")
-	Nstring = strings.ReplaceAll(Nstring, "\n", `\n`)
+	Nstring := strings.ReplaceAll(str, "\r", "")      //delete carriage returns in str
+	Nstring = strings.ReplaceAll(Nstring, "\n", `\n`) //replace new lines with literal new lines
 	split := strings.Split(Nstring, `\n`)
 
 	text, err := os.ReadFile("ascii-art/" + fnt + ".txt")
@@ -18,7 +17,7 @@ func Ascii(fnt, str string) string {
 		log.Fatal(err)
 	}
 
-	Nlines := strings.ReplaceAll(string(text), "\r", "")
+	Nlines := strings.ReplaceAll(string(text), "\r", "") //delete carriage returns in font file
 	lines := strings.Split(string(Nlines), "\n")
 	output := ""
 	for i := 0; i < len(split); i++ {
@@ -28,10 +27,8 @@ func Ascii(fnt, str string) string {
 			for j := 0; j < 8; j++ {
 				for k := 0; k < len(string(split[i])); k++ {
 					output += lines[int(((rune(split[i][k])-32)*9+1))+j]
-					//fmt.Print(lines[int(((rune(split[i][k])-32)*9+1))+j])
 				}
 				output += "\n"
-				//fmt.Println()
 			}
 		}
 	}

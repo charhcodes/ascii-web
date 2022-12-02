@@ -42,7 +42,6 @@ func result(w http.ResponseWriter, r *http.Request) {
 	runes := []rune(textinput)
 	for i := range runes {
 		if runes[i] > 127 {
-			//w.WriteHeader(http.StatusNotFound)
 			http.ServeFile(w, r, "static/400.html")
 			return
 		}
