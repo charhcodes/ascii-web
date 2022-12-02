@@ -20,8 +20,8 @@ func main() {
 	http.HandleFunc("/", Home)
 	http.HandleFunc("/result", result)
 	http.HandleFunc("/404", Err404)
-	http.HandleFunc("/400", Err500)
-	http.HandleFunc("/500", Err400)
+	http.HandleFunc("/400", Err400)
+	http.HandleFunc("/500", Err500)
 	fmt.Printf("Fetching server...")
 	http.ListenAndServe(":8080", nil)
 }
