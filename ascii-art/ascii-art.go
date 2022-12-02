@@ -7,12 +7,15 @@ import (
 	"strings"
 )
 
-func Ascii(str string) string {
+func Ascii(fnt, str string) string {
+	//fmt.Printf("value %s", fnt)
 	split := strings.Split(str, `\n`)
-	text, err := os.ReadFile("ascii-art/standard.txt")
+
+	text, err := os.ReadFile("ascii-art/" + fnt + ".txt")
 	if err != nil {
 		log.Fatal(err)
 	}
+
 	lines := strings.Split(string(text), "\n")
 	output := ""
 	for i := 0; i < len(split); i++ {
@@ -22,10 +25,10 @@ func Ascii(str string) string {
 			for j := 0; j < 8; j++ {
 				for k := 0; k < len(string(split[i])); k++ {
 					output += lines[int(((rune(split[i][k])-32)*9+1))+j]
-					fmt.Print(lines[int(((rune(split[i][k])-32)*9+1))+j])
+					//fmt.Print(lines[int(((rune(split[i][k])-32)*9+1))+j])
 				}
 				output += "\n"
-				fmt.Println()
+				//fmt.Println()
 			}
 		}
 	}

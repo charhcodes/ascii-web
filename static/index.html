@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="static/stylesheets/styles.css">
     <title>Ascii Art Generator</title>
 </head>
 
 <h1>Ascii Art Generator</h1>
 
-<form action="/result" method="POST" novalidate>
+<form action="/result" method="POST">
 
 	<div>
 		<p><label>Your text here:</label></p>
@@ -18,16 +18,14 @@
 		<label for="font">Choose font:</label><br>
     <select id="font" name="font"><br>
 
-    <option value="stand">Standard</option>
-    <option value="shad">Shadow</option>
-    <option value="think">Thinkertoy</option><br><br>
+    <option value="standard">Standard</option>
+    <option value="shadow">Shadow</option>
+    <option value="thinkertoy">Thinkertoy</option><br><br>
 	</div>
 
 	<div>
 		<input type="submit" value="Submit">
 	</div>
-  
 </form>
-
 </body>
 </html>
