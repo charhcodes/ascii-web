@@ -9,14 +9,17 @@ import (
 
 func Ascii(fnt, str string) string {
 	//fmt.Printf("value %s", fnt)
-	split := strings.Split(str, `\n`)
+	Nstring := strings.ReplaceAll(str, "\r", "")
+	Nstring = strings.ReplaceAll(Nstring, "\n", `\n`)
+	split := strings.Split(Nstring, `\n`)
 
 	text, err := os.ReadFile("ascii-art/" + fnt + ".txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	lines := strings.Split(string(text), "\n")
+	Nlines := strings.ReplaceAll(string(text), "\r", "")
+	lines := strings.Split(string(Nlines), "\n")
 	output := ""
 	for i := 0; i < len(split); i++ {
 		if string(split[i]) == "" {
