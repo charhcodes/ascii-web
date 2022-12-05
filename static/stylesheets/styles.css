@@ -4,24 +4,22 @@ body {
     font-size: 20px;
     font-family: 'Work Sans', sans-serif;
     height: 100%;
-    /* background: linear-gradient(90deg, #CAA8F5 50%, #9CC4B2 50%); */
-    background:  #9CC4B2;
+    background: linear-gradient(90deg, #CAA8F5 50%, #9CC4B2 50%);
 }
 h1 {
     color: #FFD6C0;
     font-size: 75px;
     font-family: 'Playfair Display', serif;
-    line-height: 0.2rem;
+    line-height: 0.1rem;
     padding: 0 0 1rem 0;
 }
 .content {
+    position: absolute;
+    text-align: left;
     padding-top: 2rem;
     padding-left: 4rem;
+    height: 100%;
 }
-/* label {
-    padding: 0.7rem 0 0.7rem 0;
-    background-color: transparent;
-} */
 .tinput {
     padding: 0 0 1rem 0;
 }
@@ -69,7 +67,7 @@ textarea:focus {
 }
 .fontop:after {
  font-family: 'Work Sans', sans-serif;
-    max-width: 100%;
+ max-width: 100%;
   content: "";
   position: absolute;
   top: 50%;
@@ -101,14 +99,26 @@ input[type=submit]:hover {
     color: #FFD6C0;
 }
 
-
 /* RIGHT SIDE */
-
+.images {
+    margin: 3rem 3rem 0 0;
+    /* position: relative; */
+    text-align: right;
+}
+img {
+    width: 38%;
+    height: auto;
+}
+p.images {
+    position: relative;
+    font-size: 16px;
+    text-align: right;
+}
 
 
 /* RESULT PAGE */
 .outputp {
-    padding: 2rem 0 0 3rem;
+    padding: 2rem 0 0 3.5rem;
 }
 h1.resulttitle {
     font-size: 90px;
