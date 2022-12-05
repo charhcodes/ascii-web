@@ -2,15 +2,34 @@
 <html>
 <head>
   <link rel="stylesheet" href="static/stylesheets/styles.css">
-    <title>Ascii Art Generator</title>
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+
+  <title>ascii art generator</title>
 </head>
 
 <body>
-<h1>Result</h1>
-<br><br>
-<div>
-	<pre>{{.}}</pre>
+  <div class="outputp">
+    <div class="resulttitle">
+      <h1>result</h1>
+    </div>
+
+    <div class="result">
+      <pre>{{.}}</pre>
+    </div>
+
+  <div class="again">
+    <a href="http://localhost:8080/" class="button">again!</a> 
+  </div>
+
 </div>
 </body>
+
+<footer>
+
+</footer>
 
 </html>

@@ -1,9 +1,147 @@
 body {
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-    background-color: red;
+    background-color: #9CC4B2;
+    color: #696773;
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    height: 100%;
+    /* background: linear-gradient(90deg, #CAA8F5 50%, #9CC4B2 50%); */
+    background:  #9CC4B2;
 }
-    
 h1 {
-    color: navy;
+    color: #FFD6C0;
+    font-size: 75px;
+    font-family: 'Playfair Display', serif;
+    line-height: 0.2rem;
+    padding: 0 0 1rem 0;
+}
+.content {
+    padding-top: 2rem;
+    padding-left: 4rem;
+}
+/* label {
+    padding: 0.7rem 0 0.7rem 0;
+    background-color: transparent;
+} */
+.tinput {
+    padding: 0 0 1rem 0;
+}
+
+/* CUSTOM TEXT BOX */
+textarea {
+    background-color: rgb(228, 228, 228);
+    resize: none;
+    font-family: 'Work Sans', sans-serif;
+}
+textarea:focus {
+      border: 3px solid #FFD6C0;
+}
+
+/* CUSTOM DROPDOWN LIST */
+.fontop,
+.fontop * {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+.fontop {
+  position: relative;
+  background-color: #E6E6E6;
+  border-radius: 4px;
+  margin-top: 1rem;
+  padding: 10px 15px 10px 10px;
+}
+.fontop select {
+  font-size: 1rem;
+  font-weight: normal;
+  font-family: 'Work Sans', sans-serif;
+  max-width: 100%;
+  padding: 8px 24px 8px 10px;
+  border: none;
+  background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  appearance: none;
+}
+.fontop select:active, .font select:focus {
+  outline: none;
+  box-shadow: none;
+}
+.fontop:after {
+ font-family: 'Work Sans', sans-serif;
+    max-width: 100%;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  border-top: 5px solid #aaa;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+
+/* CUSTOM SUBMIT BUTTON */
+input[type=submit] {
+    background-color: #FFB997;
+    font-weight: bold;
+    border: none;
+    font-weight: normal;
+    font-family: 'Work Sans', sans-serif;
+    margin-top: 1.5rem;
+    padding: 10px 10px 10px 10px;
+    height: 50px;
+    width: 100px;
+    border-radius: 4px;
+}
+input[type=submit]:hover {
+    background-color: #9CC4B2;
+    color: #FFD6C0;
+}
+
+
+/* RIGHT SIDE */
+
+
+
+/* RESULT PAGE */
+.outputp {
+    padding: 2rem 0 0 3rem;
+}
+h1.resulttitle {
+    font-size: 90px;
+}
+pre {
+    max-width: 50%;
+}
+.again {
+    padding-top: 2rem;
+}
+a.button {
+    font-family: 'Work Sans', sans-serif;
+    background-color: #FFB997;
+    font-weight: bold;
+    border: none;
+    font-weight: normal;
+    margin-top: 3rem;
+    padding: 1rem 2rem 1rem 2rem;
+    height: 2rem;
+    width: 5rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+a.button:hover {
+    background-color: #696773;
+    color: #9CC4B2;
+}
+@media all and (max-width:30em){
+    a.button {
+    display: block;
+    margin: 0.4em auto;
+    }
+} 
+footer {
+    padding-bottom: 5rem;
 }

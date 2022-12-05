@@ -2,31 +2,53 @@
 <html>
 <head>
   <link rel="stylesheet" href="static/stylesheets/styles.css">
-    <title>Ascii Art Generator</title>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <title>ascii art generator</title>
 </head>
 
-<h1>Ascii Art Generator</h1>
+<body>
+<div class="main">
+	<div class="content">
+		<h1>ascii art</h1>
+		<h1>generator</h1>
+	<form action="/result" method="POST">
+		<div class="tinput">
+			<p><label for="text" class="text">Your text here:</label></p>
+			<textarea id="text" name="text" rows="3" cols="40" maxlength="30"></textarea>
+			<br>
+		</div>
 
-<form action="/result" method="POST">
 
-	<div>
-		<p><label>Your text here:</label></p>
-		<textarea id="text" name="text" rows="3" cols="50" maxlength="30"></textarea>
-		<br>
-	</div>
+		<!-- <label for="fontop">choose font:</label>
+		<div class="fontop" style="width:150px;">
+			<select id="font">
+			<option value="standard">standard</option>
+			<option value="shadow">shadow</option>
+			<option value="thinkertoy">thinkertoy</option>
+			</select>
+		</div> -->
+		
+		<label for="font">choose font:</label><br>
+		<div class="fontop" style="width:150px;">
+			<select id="font" name="font"><br>
+				<option value="standard">standard</option>
+				<option value="shadow">shadow</option>
+				<option value="thinkertoy">thinkertoy</option>
+				<br>
+			</select>
+		</div>
+  
 
-	<div>
-		<label for="font">Choose font:</label><br>
-    <select id="font" name="font"><br>
-
-    <option value="standard">Standard</option>
-    <option value="shadow">Shadow</option>
-    <option value="thinkertoy">Thinkertoy</option><br><br>
-	</div>
-
-	<div>
-		<input type="submit" value="Submit">
+		<div class="button">
+			<input type="submit" value="submit">
+		</div>
 	</div>
 </form>
+</div>
+
 </body>
 </html>
