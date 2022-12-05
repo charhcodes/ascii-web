@@ -1,6 +1,6 @@
 body {
     background-color: #9CC4B2;
-    color: #696773;
+    color: #404040;
     font-size: 20px;
     font-family: 'Work Sans', sans-serif;
     height: 100%;
@@ -8,7 +8,7 @@ body {
 }
 h1 {
     color: #FFD6C0;
-    font-size: 75px;
+    font-size: 7vw;
     font-family: 'Playfair Display', serif;
     line-height: 0.1rem;
     padding: 0 0 1rem 0;
@@ -29,9 +29,13 @@ textarea {
     background-color: rgb(228, 228, 228);
     resize: none;
     font-family: 'Work Sans', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 95%;
 }
 textarea:focus {
-      border: 3px solid #FFD6C0;
+    border: 3px solid #FFD6C0;
 }
 
 /* CUSTOM DROPDOWN LIST */
@@ -48,6 +52,7 @@ textarea:focus {
   border-radius: 4px;
   margin-top: 1rem;
   padding: 10px 15px 10px 10px;
+  width: 100%;
 }
 .fontop select {
   font-size: 1rem;
@@ -71,7 +76,7 @@ textarea:focus {
   content: "";
   position: absolute;
   top: 50%;
-  right: 8px;
+  right: 1rem;
   width: 0;
   height: 0;
   margin-top: -2px;
@@ -89,9 +94,9 @@ input[type=submit] {
     font-weight: normal;
     font-family: 'Work Sans', sans-serif;
     margin-top: 1.5rem;
-    padding: 10px 10px 10px 10px;
-    height: 50px;
-    width: 100px;
+    padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+    height: 4rem;
+    width: 8rem;
     border-radius: 4px;
 }
 input[type=submit]:hover {
@@ -101,7 +106,7 @@ input[type=submit]:hover {
 
 /* RIGHT SIDE */
 .images {
-    margin: 3rem 3rem 0 0;
+    margin: 3rem 4rem 0 0;
     /* position: relative; */
     text-align: right;
 }
@@ -111,7 +116,7 @@ img {
 }
 p.images {
     position: relative;
-    font-size: 13px;
+    font-size: 0.8rem;
     text-align: right;
 }
 
@@ -124,10 +129,17 @@ h1.resulttitle {
     font-size: 90px;
 }
 pre {
-    max-width: 50%;
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
 }
 .again {
     padding-top: 2rem;
+    padding-left: 2rem;
 }
 a.button {
     font-family: 'Work Sans', sans-serif;
@@ -146,12 +158,27 @@ a.button:hover {
     background-color: #696773;
     color: #9CC4B2;
 }
-@media all and (max-width:30em){
-    a.button {
-    display: block;
-    margin: 0.4em auto;
-    }
-} 
 footer {
     padding-bottom: 5rem;
 }
+
+
+/* FIXES FOR SMALLER BROWSERS */
+@media all and (max-width:40em){
+    /* a.button {
+    display: block;
+    margin: 0.4em auto;
+    } */
+    .outputp {
+        padding-right: 1vw;;
+    }
+    textarea {
+        width: 8rem;
+    }
+    .content {
+        padding-left: 2rem;
+    }
+    .images {
+        padding-top: 5rem; 
+    }
+} 
