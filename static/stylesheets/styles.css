@@ -11,7 +11,7 @@ h1 {
     font-size: 7vw;
     font-family: 'Playfair Display', serif;
     line-height: 0.1rem;
-    padding: 0 0 1rem 0;
+    padding-bottom: 1rem;
 }
 .content {
     position: absolute;
@@ -104,7 +104,7 @@ input[type=submit]:hover {
     color: #FFD6C0;
 }
 
-/* RIGHT SIDE */
+/* RIGHT SIDE & IMAGES */
 .images {
     margin: 3rem 4rem 0 0;
     /* position: relative; */
@@ -123,7 +123,7 @@ p.images {
 
 /* RESULT PAGE */
 .outputp {
-    padding: 2rem 0 0 3.5rem;
+    padding: 1rem 0 0 3.5rem;
 }
 h1.resulttitle {
     font-size: 90px;
@@ -169,16 +169,16 @@ footer {
     display: block;
     margin: 0.4em auto;
     } */
-    .outputp {
-        padding-right: 1vw;;
-    }
+    /* .outputp {
+        padding-right: 0.2rem;
+    } */
     textarea {
-        width: 8rem;
+        width: 9rem;
     }
     .content {
-        padding-left: 2rem;
+        padding-left: 1.5rem;
     }
     .images {
-        padding-top: 5rem; 
+        padding-top: 5rem;
     }
 } 
