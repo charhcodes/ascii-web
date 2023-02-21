@@ -1,0 +1,18 @@
+				<!-- <label for="fontop">choose font:</label>
+		<div class="fontop" style="width:150px;">
+			<select id="font">
+			<option value="standard">standard</option>
+			<option value="shadow">shadow</option>
+			<option value="thinkertoy">thinkertoy</option>
+			</select>
+		</div> -->
+
+				<!-- <label for="font">choose font:</label><br>
+		<div class="fontop" style="width:150px;">
+			<select id="font" name="font"><br>
+				<option value="standard">standard</option>
+				<option value="shadow">shadow</option>
+				<option value="thinkertoy">thinkertoy</option>
+				<br>
+			</select>
+		</div> -->
