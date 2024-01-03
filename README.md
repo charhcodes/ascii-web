@@ -1,6 +1,6 @@
 # ASCII Web
 
-_An ASCII art generator site made as made as part of the 01 Founders course. Utilises HTML, CSS and Go.
+An ASCII art generator site made as made as part of the 01 Founders course. Utilises HTML, CSS and Go.
 
 
 
